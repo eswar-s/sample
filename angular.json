@@ -28,9 +28,12 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/material-design-lite/dist/material.blue-deep_purple.min.css",
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/material-design-lite/material.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -57,7 +60,7 @@
                 {
                   "type": "anyComponentStyle",
                   "maximumWarning": "6kb",
-                  "maximumError": "10kb"
+                  "maximumError": "15kb"
                 }
               ]
             }
@@ -121,8 +124,16 @@
               "devServerTarget": "sample:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {}
         }
       }
-    }},
-  "defaultProject": "sample"
+    }
+  },
+  "defaultProject": "sample",
+  "cli": {
+    "analytics": "f602ba07-5197-467e-aab1-b17d3b93decd"
+  }
 }
